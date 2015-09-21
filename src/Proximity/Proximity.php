@@ -12,7 +12,7 @@
 namespace Proximity;
 
 use Proximity\Tools\Distances;
-use GuzzleHttp;
+use GuzzleHttp\Client as HttpClient;
 
 /**
  * Proximity
@@ -47,6 +47,11 @@ class Proximity {
     );
 
     /**
+     * The HTTP Client to send API requests
+     */
+    public $http;
+
+    /**
      * @param array $elements The elements that will be sorted
      * @param array $opts     Optional parameters
      */
@@ -56,6 +61,7 @@ class Proximity {
         }
 
         $this->elements = $elements;
+        $this->http = new HttpClient();
     }
 
     /**
@@ -96,6 +102,15 @@ class Proximity {
     }
 
     /**
+     * Returns the options
+     *
+     * @return $opts
+     */
+    public function getOptions() {
+        return $this->opts;
+    }
+
+    /**
      * Takes a string (post code, address, etc), queries the Google Maps API,
      * and returns the $sortedElements sorted by distance
      *
@@ -103,8 +118,7 @@ class Proximity {
      * @return $location data of the query string (longlat and address)
      */
     private function query($query) {
-        $apiClient = new GuzzleHttp\Client();
-        $res = $apiClient->request('GET',
+        $res = $this->http->request('GET',
             'https://maps.googleapis.com/maps/api/geocode/json?address='
                 .$query
                 .',norway&language='

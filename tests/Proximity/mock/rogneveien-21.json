@@ -1,0 +1,310 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "21",
+               "short_name" : "21",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rogneveien",
+               "short_name" : "Rogneveien",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Silsand",
+               "short_name" : "Silsand",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Lenvik",
+               "short_name" : "Lenvik",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Troms",
+               "short_name" : "Troms",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Norge",
+               "short_name" : "NO",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "9303",
+               "short_name" : "9303",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rogneveien 21, 9303 Silsand, Norge",
+         "geometry" : {
+            "location" : {
+               "lat" : 69.24263239999999,
+               "lng" : 17.9427405
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 69.2439813802915,
+                  "lng" : 17.9440894802915
+               },
+               "southwest" : {
+                  "lat" : 69.24128341970849,
+                  "lng" : 17.9413915197085
+               }
+            }
+         },
+         "place_id" : "ChIJGS0NmCFE20URYG4PYkY4bvI",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "21",
+               "short_name" : "21",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rogneveien",
+               "short_name" : "Rogneveien",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Hagan",
+               "short_name" : "Hagan",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Nittedal",
+               "short_name" : "Nittedal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Akershus",
+               "short_name" : "Akershus",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Norge",
+               "short_name" : "NO",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "1481",
+               "short_name" : "1481",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rogneveien 21, 1481 Hagan, Norge",
+         "geometry" : {
+            "location" : {
+               "lat" : 60.0014306,
+               "lng" : 10.9246298
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 60.00277958029151,
+                  "lng" : 10.9259787802915
+               },
+               "southwest" : {
+                  "lat" : 60.0000816197085,
+                  "lng" : 10.9232808197085
+               }
+            }
+         },
+         "place_id" : "ChIJP86_FXp6QUYRsg1BRGpoExM",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "21",
+               "short_name" : "21",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rogneveien",
+               "short_name" : "Rogneveien",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Andebu",
+               "short_name" : "Andebu",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Andebu",
+               "short_name" : "Andebu",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Vestfold",
+               "short_name" : "Vestfold",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Norge",
+               "short_name" : "NO",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "3158",
+               "short_name" : "3158",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rogneveien 21, 3158 Andebu, Norge",
+         "geometry" : {
+            "location" : {
+               "lat" : 59.2986686,
+               "lng" : 10.191785
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 59.30001758029151,
+                  "lng" : 10.1931339802915
+               },
+               "southwest" : {
+                  "lat" : 59.2973196197085,
+                  "lng" : 10.1904360197085
+               }
+            }
+         },
+         "place_id" : "ChIJhWneXdnIRkYRT1tvksjdeHU",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "21",
+               "short_name" : "21",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rogneveien",
+               "short_name" : "Rogneveien",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Risør",
+               "short_name" : "Risør",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Risør",
+               "short_name" : "Risør",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Risør",
+               "short_name" : "Risør",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Aust-Agder",
+               "short_name" : "Aust-Agder",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Norge",
+               "short_name" : "NO",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "4950",
+               "short_name" : "4950",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rogneveien 21, 4950 Risør, Norge",
+         "geometry" : {
+            "location" : {
+               "lat" : 58.71506729999999,
+               "lng" : 9.227468
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 58.7164162802915,
+                  "lng" : 9.228816980291503
+               },
+               "southwest" : {
+                  "lat" : 58.71371831970848,
+                  "lng" : 9.226119019708499
+               }
+            }
+         },
+         "place_id" : "ChIJ0_GS6ZyoR0YRldJj5f97Ajk",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "21",
+               "short_name" : "21",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rogneveien",
+               "short_name" : "Rogneveien",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Ås",
+               "short_name" : "Ås",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Ås",
+               "short_name" : "Ås",
+               "types" : [ "postal_town" ]
+            },
+            {
+               "long_name" : "Ås",
+               "short_name" : "Ås",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Akershus",
+               "short_name" : "Akershus",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Norge",
+               "short_name" : "NO",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "1430",
+               "short_name" : "1430",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rogneveien 21, 1430 Ås, Norge",
+         "geometry" : {
+            "location" : {
+               "lat" : 59.65026989999999,
+               "lng" : 10.796656
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 59.6516188802915,
+                  "lng" : 10.7980049802915
+               },
+               "southwest" : {
+                  "lat" : 59.64892091970849,
+                  "lng" : 10.7953070197085
+               }
+            }
+         },
+         "place_id" : "ChIJuUFBWhVbQUYRyZenjL6bX9s",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
