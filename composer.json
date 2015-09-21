@@ -1,0 +1,22 @@
+{
+    "name": "ludens-reklamebyra/proximity",
+    "type": "library",
+    "description": "Find \"things\" nearby, or as far away as possible, based on longitude and latitude.",
+    "keywords": ["geo", "longlat", "proximity"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stian Bakkane",
+            "email": "stianba@gmail.com",
+            "homepage": "https://github.com/stianba/"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "Proximity\\": "src/Proximity"
+        }
+    }
+}
