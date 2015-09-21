@@ -83,7 +83,7 @@ class Proximity {
      * @param constant $order[SORT_ASC || SORT_DESC] The order of the returned results. By distance
      * @return $elements sorted by distance
      */
-    public function getElements($order = SORT_ASC) {
+    public function getElements($order = SORT_DESC) {
         $elements = $this->elements;
         $distance = array();
 
