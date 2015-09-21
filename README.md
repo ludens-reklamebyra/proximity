@@ -4,23 +4,8 @@
 Find "things" nearby, or as far away as possible, based on longitude and latitude.
 
 ## Install
-In `composer.json`:
-```javascript
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ludens-reklamebyra/proximity"
-        }
-    ],
-    "require": {
-        "ludens-reklamebyra/proximity": "~1.0.0"
-    }
-}
 ```
-Then, in terminal:
-```
-$ composer install
+$ composer require ludens-reklamebyra/proximity
 ```
 
 ## Usage
