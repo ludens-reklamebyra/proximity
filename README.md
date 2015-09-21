@@ -2,6 +2,7 @@
 Find "things" nearby, or as far away as possible, based on longitude and latitude.
 
 ## Install
+In `composer.json`:
 ```javascript
 {
     "repositories": [
@@ -15,6 +16,7 @@ Find "things" nearby, or as far away as possible, based on longitude and latitud
     }
 }
 ```
+Then, in terminal:
 ```
 $ composer install
 ```
