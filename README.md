@@ -12,7 +12,7 @@ In `composer.json`:
         }
     ],
     "require": {
-        "ludens-reklamebyra/proximity": "v1.0.0"
+        "ludens-reklamebyra/proximity": "~1.0.0"
     }
 }
 ```
@@ -51,4 +51,21 @@ $dummyData = array(
 
 $proximity = new Proximity($dummyData);
 $proximity->search('risør', SORT_DESC);
+```
+
+### new Proximity([elements], [options])
+#### elements [array]
+Each element has to include:
+```javascript
+{
+  longitude: float,
+  latitude: float
+}
+```
+
+#### options [array]
+```php
+array(
+    'language': 'en' // Language of returned Google Maps results
+)
 ```

@@ -25,7 +25,7 @@ use GuzzleHttp;
 class Proximity {
     /**
      * The $elements that will be sorted.
-     * Each element has to include: id, longitude, latitude
+     * Each element has to include: longitude, latitude
      */
     private $elements = array();
 
@@ -74,7 +74,7 @@ class Proximity {
             return $this->getElements($order);
         } else {
             return $this->location;
-        }        
+        }
     }
 
     /**
