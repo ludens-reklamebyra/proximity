@@ -1,4 +1,6 @@
 # Proximity
+![Travis](https://travis-ci.org/ludens-reklamebyra/proximity.svg?branch=travis_integration)
+
 Find "things" nearby, or as far away as possible, based on longitude and latitude.
 
 ## Install
