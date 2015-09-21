@@ -66,6 +66,6 @@ Each element has to include:
 #### options [array]
 ```php
 array(
-    'language': 'en' // Language of returned Google Maps results
+    'language' => 'en' // Language of returned Google Maps results
 )
 ```
