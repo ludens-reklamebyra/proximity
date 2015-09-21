@@ -38,11 +38,6 @@ class Proximity {
     );
 
     /**
-     * The sorted elements based on the search() query
-     */
-    public $sortedElements = array();
-
-    /**
      * The location data of the search() query
      */
     public $location = array(
@@ -64,22 +59,39 @@ class Proximity {
     }
 
     /**
-     * Takes the $elements and calculates their distance from the search() query
+     * Takes a string (post code, address, etc), and runs the query() method,
+     * and returns the $sortedElements sorted by distance
      *
-     * @return $elements with distance data
+     * @param string   $query                        The query string that will be sent to the Google Maps API
+     * @param constant $order[SORT_ASC || SORT_DESC] The order of the returned results. By distance
+     * @return $elements sorted by distance
      */
-    private function findElementDistances() {
-        $elements = array();
+    public function search($query, $order = SORT_ASC) {
+        $this->location = $this->query($query);
 
-        foreach ($this->elements as $element) {
-            $distance = Distances::calculate($element['latitude'],
-                $element['longitude'],
-                $this->location['latitude'],
-                $this->location['longitude'], 'K');
+        if (isset($this->location['latitude'])) {
+            $this->elements = $this->findElementDistances();
+            return $this->getElements($order);
+        } else {
+            return $this->location;
+        }        
+    }
 
-    		$elements[$element['id']] = $distance;
+    /**
+     * Returns the $sortedElements sorted by distance
+     *
+     * @param constant $order[SORT_ASC || SORT_DESC] The order of the returned results. By distance
+     * @return $elements sorted by distance
+     */
+    public function getElements($order = SORT_ASC) {
+        $elements = $this->elements;
+        $distance = array();
+
+        foreach ($elements as $k => $v) {
+            $distance[$k] = $v['distance'];
         }
 
+        array_multisort($distance, $order, $elements);
         return $elements;
     }
 
@@ -87,11 +99,10 @@ class Proximity {
      * Takes a string (post code, address, etc), queries the Google Maps API,
      * and returns the $sortedElements sorted by distance
      *
-     * @param string   $query                        The query string that will be sent to the Google Maps API
-     * @param constant $order[SORT_ASC || SORT_DESC] The order of the returned results. By distance
-     * @return $sortedElements sorted by distance
+     * @param string $query The query string that will be sent to the Google Maps API
+     * @return $location data of the query string (longlat and address)
      */
-    public function search($query, $order = SORT_ASC) {
+    private function query($query) {
         $apiClient = new GuzzleHttp\Client();
         $res = $apiClient->request('GET',
             'https://maps.googleapis.com/maps/api/geocode/json?address='
@@ -124,33 +135,32 @@ class Proximity {
 
         $location = $data->results[0]->geometry->location;
 
-        // Save the location of the search query
-        $this->location = array(
+        // Return the location of the search query
+        return array(
             "longitude" => $location->lng,
             "latitude" => $location->lat,
             "address" => $data->results[0]->formatted_address
         );
-
-        // Save the sorted $elements to $sortedElements and return them
-        $this->sortedElements = $this->findElementDistances();
-        return $this->getElements($order);
     }
 
     /**
-     * Returns the $sortedElements sorted by distance
+     * Takes the $elements and calculates their distance from the search() query
      *
-     * @param constant $order[SORT_ASC || SORT_DESC] The order of the returned results. By distance
-     * @return $sortedElements sorted by distance
+     * @return $elements with distance data
      */
-    public function getElements($order = SORT_ASC) {
-        $sortedElements = $this->sortedElements;
+    private function findElementDistances() {
+        $elements = array();
 
-        if ($order == SORT_ASC) {
-            asort($sortedElements);
-        } else {
-            arsort($sortedElements);
+        foreach ($this->elements as $element) {
+            $distance = Distances::calculate($element['latitude'],
+                $element['longitude'],
+                $this->location['latitude'],
+                $this->location['longitude'], 'K');
+
+    		$element['distance'] = $distance;
+            $elements[] = $element;
         }
 
-        return $sortedElements;
+        return $elements;
     }
 }
